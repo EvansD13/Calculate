@@ -1,5 +1,5 @@
 const colors = require(`ansi-colors`)
-const prompt = require(`prompt-sync`)
+const prompt = require(`prompt-sync`)();
 
 function calculate(a, b, operation){
     if (typeof(a) != "number" || typeof(b) != "number"){
@@ -20,7 +20,7 @@ function calculate(a, b, operation){
 
 
 
-let operation = "-"//prompt("Please input an operation")
+let operation = prompt("Please input an operation")
 
 for(let i = 0; i < 5; i++){
     let n1 = Math.floor(Math.random() * 13)//prompt("Please input a value");
